@@ -1,0 +1,61 @@
+{
+	"model": {
+		"id": "fast2704v2",
+		"name": "Sagem F@ST2704V2"
+	},
+	"led": {
+		"usb": {
+			"name": "USB",
+			"sysfs": "F@ST2704V2:green:usb",
+			"type": "usb",
+			"device": "1-1"
+		}
+	},
+	"switch": {
+		"switch0": {
+			"enable": true,
+			"reset": true,
+			"ports": [
+				{
+					"num": 0,
+					"role": "lan",
+					"index": 1
+				},
+				{
+					"num": 1,
+					"role": "lan",
+					"index": 2
+				},
+				{
+					"num": 2,
+					"role": "lan",
+					"index": 3
+				},
+				{
+					"num": 3,
+					"role": "lan",
+					"index": 4
+				},
+				{
+					"num": 8,
+					"device": "eth0",
+					"need_tag": true,
+					"want_untag": false
+				}
+			],
+			"roles": [
+				{
+					"role": "lan",
+					"ports": "0 1 2 3 8t",
+					"device": "eth0.1"
+				}
+			]
+		}
+	},
+	"network": {
+		"lan": {
+			"ifname": "eth0.1",
+			"protocol": "static"
+		}
+	}
+}
